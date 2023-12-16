@@ -7,7 +7,7 @@ LightChange=10
 SensorDelay=1
 
 # Scale sesor to displas brightness range
-SensorToDisplayScale=24
+SensorToDisplayScale=1
 
 #This should match your refesh rate other wise it will either change the back light more times than needed or too few for a smooth animation
 LevelSteps=60
@@ -16,7 +16,7 @@ AnimationDelay=0.016
 
 
 # Read the variable names
-MaxScreenBrightness=96000
+MaxScreenBrightness=255
 
 MinimumBrightness=001
 
@@ -106,7 +106,7 @@ do
     then
 
 
-		  CurrentBrightness=$(cat /sys/class/backlight/intel_backlight/brightness)
+		  CurrentBrightness=$(cat /sys/class/backlight/amdgpu_bl1/brightness)
 
 
 		  Light=$(( $Light + $MinimumBrightness ))
