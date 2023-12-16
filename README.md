@@ -1,3 +1,26 @@
+A fork of [steel99xl's Mac-like-automatic-brightness script](https://github.com/steel99xl/Mac-like-automatic-brightness) for use with the 13 inch AMD Framework.
+
+## Systemd
+
+Ensure the script can be executed: `chmod +x AutomaticBrightness.sh`
+
+Create a simple unit file: `$HOME/.config/systemd/user/autobrightness.service`
+
+With the contents:
+
+```
+[Unit]
+Description=Mac like automatic brightness service
+
+[Service]
+ExecStart=/path/to/AutomaticBrightness.sh
+
+[Install]
+WantedBy=default.target
+```
+
+And then start it `systemctl --user enable --now autobrightness`
+
 # Mac-like-automatic-brightness
 A simple script to provide a "Mac" like automatic brightness adjustemnt/ animation
 
