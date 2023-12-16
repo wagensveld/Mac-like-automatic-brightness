@@ -18,7 +18,7 @@ AnimationDelay=0.016
 # Read the variable names
 MaxScreenBrightness=255
 
-MinimumBrightness=001
+MinimumBrightness=000
 
 
 
